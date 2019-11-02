@@ -11,8 +11,8 @@ const todoItems = [
     completed: false
   },
   {
-    task: 'Organize Garage',
-    id: 1528817077286,
+    task: 'Bake Cookies',
+    id: 1528817084358,
     completed: false
   }
 ];
@@ -69,7 +69,7 @@ addItem = task => {
         <div className="header">
         <h2>Welcome to your Todo App!</h2>
         <TodoList 
-        stateList={this.state.todoItems}
+        stateList={this.state.todo}
         completionHandler={this.handleClick}
         />
         <TodoForm clearCompleted={this.clearCompleted} addItem={this.addItem}  />
