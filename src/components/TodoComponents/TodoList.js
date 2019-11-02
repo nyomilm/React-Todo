@@ -9,7 +9,7 @@ const TodoList = ({ stateList, completionHandler }) => {
             {stateList.map((item, id) => (
                 <TodoBlock key={id} item={item} completionHandler={completionHandler} />
             )
-                )}
+            )}
         </div>
     );
 };

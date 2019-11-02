@@ -7,7 +7,8 @@ const Todo = ({ completionHandler, item: { task, id, completed } }) => {
         <div>
             <p className={`${completed ? 'underline' : ''}`}
                 onClick={() =>
-                    completionHandler(id)}>{task}</p>
+                    completionHandler(id)}
+                    >{task}</p>
         </div>
     );
 };

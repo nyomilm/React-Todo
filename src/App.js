@@ -46,12 +46,22 @@ handleClick = id => {
 
 clearCompleted = () => {
   this.setState({
-    todo: this.state.todo.filter(item => !item => !item.completed)
+    todo: this.state.todo.filter(item => !item.completed)
   });
 };
 
 
-addItem = 
+addItem = task => {
+  const newTask = {
+    task: task,
+    id: Date.now(),
+    completed: false
+  };
+  this.setState({
+    todo: [...this.state.todo, newTask]
+  });
+};
+
   render() {
     console.log("rendering...");
      return (
@@ -62,7 +72,7 @@ addItem =
         stateList={this.state.todoItems}
         completionHandler={this.handleClick}
         />
-        <TodoForm />
+        <TodoForm clearCompleted={this.clearCompleted} addItem={this.addItem}  />
         </div>
         
       </div>
